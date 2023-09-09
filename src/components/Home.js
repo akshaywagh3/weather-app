@@ -10,7 +10,6 @@ import snow from './images/Snow.png'
 import thunder from './images/Thunderstorm.png'
 import LightRain from './images/LightRain.png'
 import Mist from './images/Mist.png'
-import { clear } from '@testing-library/user-event/dist/clear';
 
 const Home = () => {
     
@@ -36,7 +35,7 @@ const Home = () => {
                 
                 const weatherData={
                     'celsius':res.main.temp ,
-                    'name' :res.sys.name ,
+                    'name':res.name ,
                     'humidity':res.main.humidity,
                     'speed':res.wind.speed,
                     'description':res.weather[0].main
@@ -70,7 +69,9 @@ const Home = () => {
                 {(data.description==='Mist') &&  <img src={Mist} alt='' className='icon'></img>}
 
                 <h1>{Math.floor(data.celsius-273.15)}°c</h1>
+
                 <h2>{data.name}</h2>
+                <h3>{data.description}</h3>
                 <div className='details'>
                     <div className='col'>
                     <img src={Humi} alt=''></img>

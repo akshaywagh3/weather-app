@@ -55,7 +55,8 @@
 .winfo h2{
     font-size: 40px;
     font-weight: 400;
-    margin-top: -40px;
+    margin-top: 10px;
+    color: white;
 }
 .details{
     display: flex;
