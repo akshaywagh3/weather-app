@@ -19,7 +19,8 @@ const Home = () => {
         'name':'Pune',
         'humidity':4,
         'speed':5,
-        'description':''
+        'description':'',
+        'icon':'',
         
 
     })
@@ -38,7 +39,8 @@ const Home = () => {
                     'name':res.name ,
                     'humidity':res.main.humidity,
                     'speed':res.wind.speed,
-                    'description':res.weather[0].main
+                    'description':res.weather[0].main,
+                    'icon':res.weather[0].icon
                 }
                 setData(weatherData)
             }           
@@ -66,7 +68,7 @@ const Home = () => {
                 {data.description==='Clouds' && <img src={LightCloud} alt='' className='icon'></img>}
                 {(data.description==='Rain') &&  <img src={HeavyRain} alt='' className='icon'></img>}
                 {(data.description==='Drizzle') &&  <img src={LightRain} alt='' className='icon'></img>}
-                {(data.description==='Mist') &&  <img src={Mist} alt='' className='icon'></img>}
+                {(data.icon==='50d') &&  <img src={Mist} alt='' className='icon'></img>}
 
                 <h1>{Math.floor(data.celsius-273.15)}°c</h1>
 
