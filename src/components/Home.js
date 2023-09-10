@@ -15,10 +15,10 @@ const Home = () => {
     
     const [data,setData]=useState({
         
-        'celsius':10,
+        'celsius':'°C',
         'name':'Pune',
-        'humidity':4,
-        'speed':5,
+        'humidity':'humidity%',
+        'speed':0,
         'description':'',
         'icon':'',
         
